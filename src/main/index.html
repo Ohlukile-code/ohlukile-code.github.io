@@ -1,59 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <title>Responsive Menu Example</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesego Khumalo</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Header styling */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #4caf50, #8bc34a);
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2rem;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 18px;
+            margin: 0 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Responsive menu */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .navbar a {
+                flex: 1 1 auto;
+                text-align: center;
+            }
+        }
+
+        /* Section styling */
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        #home {
+            background: #f4f4f4;
+        }
+
+        #about {
+            background: #ddd;
+        }
+
+        #services {
+            background: #ccc;
+        }
+
+        #contact {
+            background: #bbb;
+        }
+    </style>
 </head>
 <body>
+<!-- Header -->
 <header>
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <h1>Welcome to My Website</h1>
+    <p>Explore our services and get in touch with us!</p>
 </header>
 
-<section id="home">
-    <div class="hero">
-        <h1>Welcome to Lesego Khumalo</h1>
-        <p>Your one-stop solution for all things tech</p>
-    </div>
-</section>
+<!-- Navigation Menu -->
+<nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<section id="services">
-    <div class="container">
-        <h2>Our Services</h2>
-        <div class="service-item">
-            <h3>Web Design</h3>
-            <p>Custom websites tailored to your needs.</p>
-        </div>
-        <div class="service-item">
-            <h3>Development</h3>
-            <p>From front-end to back-end development.</p>
-        </div>
-        <div class="service-item">
-            <h3>SEO Optimization</h3>
-            <p>Boost your search engine rankings with our expert services.</p>
-        </div>
-    </div>
+<!-- Sections -->
+<section id="home">
+    <h1>Home Section</h1>
+    <p>This is the home section. Welcome to our website!</p>
 </section>
 
 <section id="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>We are a passionate team of developers focused on delivering the best tech solutions.</p>
-    </div>
+    <h1>About Section</h1>
+    <p>Learn more about us and what we do.</p>
 </section>
 
-<footer id="contact">
-    <p></p>
-</footer>
+<section id="services">
+    <h1>Services Section</h1>
+    <p>Discover the services we offer to make your life easier.</p>
+</section>
 
-<script src="script.js"></script>
+<section id="contact">
+    <h1>Contact Section</h1>
+    <p>Get in touch with us. We'd love to hear from you!</p>
+</section>
 </body>
 </html>
