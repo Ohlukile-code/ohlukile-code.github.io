@@ -1,4 +1,9 @@
-// Example JavaScript for future functionality
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Clark-Mater Website Loaded');
-});
+//// Smooth Scroll Functionality for Navigation
+//document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//    anchor.addEventListener('click', function (e) {
+//        e.preventDefault();
+//        document.querySelector(this.getAttribute('href')).scrollIntoView({
+//            behavior: 'smooth'
+//        });
+//    });
+//});

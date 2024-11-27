@@ -1,137 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Responsive Menu Example</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesego Khumalo - Software Developer</title>
     <style>
-        /* Body styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f4f4f4;
         }
 
-        /* Header styling */
         header {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            background: linear-gradient(45deg, #4caf50, #8bc34a);
-            color: white;
-            text-align: center;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-
-        header p {
-            margin: 10px 0 0;
-            font-size: 1.2rem;
-        }
-
-        /* Navigation bar */
-        .navbar {
-            display: flex;
-            justify-content: center;
             background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 10px 0;
+            color: white;
+            padding: 10px 20px;
         }
 
-        .navbar a {
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li {
+            padding: 10px;
+        }
+
+        nav ul li a {
             color: white;
             text-decoration: none;
-            padding: 14px 20px;
             font-size: 18px;
-            margin: 0 5px;
         }
 
-        .navbar a:hover {
-            background-color: #575757;
-            border-radius: 5px;
-        }
-
-        /* Responsive menu */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-wrap: wrap;
-            }
-
-            .navbar a {
-                flex: 1 1 auto;
-                text-align: center;
-            }
-        }
-
-        /* Section styling */
         section {
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            font-size: 1.5rem;
-            text-align: center;
+            padding: 50px 20px;
+            min-height: 100vh;
         }
 
         #home {
-            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+            text-align: center;
         }
 
-        #about {
-            background: #ddd;
+        #home h1 {
+            font-size: 3em;
+            transform: perspective(300px) rotateX(15deg);
+            margin-bottom: 10px; /* Adds space between the lines */
         }
 
-        #services {
-            background: #ccc;
+        #home h1 span {
+            font-weight: bold; /* Makes "A SOFTWARE DEVELOPER" bold */
         }
 
-        #contact {
-            background: #bbb;
+        #about, #resume, #services, #skills, #projects, #contact {
+            background-color: white;
+            margin-bottom: 50px;
         }
-    </style>
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .resume-wrap, .service-block {
+            background: #f7f7f7;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        .service-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-block {
+            width: 48%;
+            background-color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .contact-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service-block {
+                width: 100%;
+            }
+
+            #home h1 {
+                font-size: 2em;
+            }
+        }
+<!--    </style>-->
 </head>
 <body>
-<!-- Header -->
+
+<!-- Header and Navigation -->
 <header>
-    <h1>Welcome to My Website</h1>
-    <p>Explore our services and get in touch with us!</p>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- Navigation Menu -->
-<nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<!-- Sections -->
+<!-- Home Section -->
 <section id="home">
-    <h1>Home Section</h1>
-    <p>This is the home section. Welcome to our website!</p>
+    <h1>Lesego Khumalo<br><span>A SOFTWARE DEVELOPER</span></h1>
 </section>
 
+<!-- About Section -->
 <section id="about">
-    <h1>About Section</h1>
-    <p>Learn more about us and what we do.</p>
+    <div class="container">
+        <div class="heading">
+            <h1>About Me</h1>
+            <p>I'm Lesego Khumalo, a second-year Software Development student at WeThinkCode with a passion for Android Development, Application Development, Custom Software Development, Mobile Application Development, Software Testing, and Web Design. I'm dedicated to using technology to drive positive change, particularly in underrepresented communities. With experience in building full-stack applications, I focus on creating scalable and impactful software solutions. When I'm not coding, I'm exploring new tools and technologies to enhance my skills and contribute to the tech industry.</p>
+            <ul>
+
+
+                <li>Name: Lesego Khumalo</li>
+
+                <li>Address: South Africa, Johannesburg</li>
+
+                <li>Email: ohlukilekhumalo21@gmail.com</li>
+
+                <li>Phone: +27 81-494-8975</li>
+            </ul>
+        </div>
+    </div>
 </section>
 
+<!-- Resume Section -->
+<section id="resume">
+    <div class="container">
+        <div class="heading">
+            <h1>Resume</h1>
+            <p>A small river of innovation flows through my work, bringing creative solutions and new opportunities. It's a world of possibilities where technology transforms ideas into impactful realities, shaping the future with each project I undertake.</p>
+        </div>
+        <div class="resume-wrap">
+            <span class="date">2023-2024</span>
+            <h2>Software Engineer</h2>
+            <span class="position">WeThinkCode_</span>
+            <p>Intensive training in software development, problem-solving, and project-based learning.</p>
+        </div>
+        <div class="resume-wrap">
+            <span class="date">2024-2024</span>
+            <h2>Information Technology Administration and Management</h2>
+            <span class="position">Tech4Dev</span>
+            <p>Acquired a strong foundation in IT infrastructure and management.</p>
+        </div>
+        <div class="resume-wrap">
+            <span class="date">2024</span>
+            <h2>Web Development</h2>
+            <span class="position">IBM</span>
+            <p>Developed proficiency in core web technologies, including HTML, CSS, JavaScript, and responsive design principles.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
 <section id="services">
-    <h1>Services Section</h1>
-    <p>Discover the services we offer to make your life easier.</p>
+    <div class="container">
+        <div class="heading">
+            <h1>Services</h1>
+            <p>Based in South Africa, I offer a range of services in software development, specializing in Android Development, Application Development, Custom Software Development, and more.</p>
+        </div>
+        <div class="service-blocks">
+            <div class="service-block">Application Development</div>
+            <div class="service-block">Custom Software Development</div>
+            <div class="service-block">Mobile Application Development</div>
+            <div class="service-block">Software Testing</div>
+        </div>
+    </div>
 </section>
 
-<section id="contact">
-    <h1>Contact Section</h1>
-    <p>Get in touch with us. We'd love to hear from you!</p>
+<!-- Skills Section -->
+<section id="skills">
+    <div class="container">
+        <div class="heading">
+            <h1>Skills</h1>
+            <p>Proficient in Android Development, Web Design, Software Development, Testing, and more.</p>
+        </div>
+    </div>
 </section>
+
+<!-- Projects Section -->
+<section id="projects">
+    <div class="container">
+        <div class="heading">
+            <h1>Projects</h1>
+            <p>Here are some of the projects I've worked on.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="heading">
+            <h1>Contact</h1>
+            <p>Feel free to reach out to me for collaboration, project inquiries, or any questions.</p>
+            <div class="contact-btn">
+                <button>Contact Me</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Smooth Scroll Functionality for Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
 </body>
 </html>
